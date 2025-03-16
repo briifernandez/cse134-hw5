@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="site-navigation">
+      <h1>Work Experience</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <div id="work-container">
+        <section id="prev-work">
+          <h3>Previous Work Experience</h3>
+          <ol>
+            <li>San Diego Supercomputer Center</li>
+            <li>County of San Diego</li>
+          </ol>
+          <div id="tables-container">
+            <table border="1">
+              <caption>
+                Current Technologies
+              </caption>
+              <colgroup>
+                <col span="1" />
+              </colgroup>
+              <tr>
+                <th>Web Development</th>
+              </tr>
+              <tr>
+                <td><dfn title="JavaScript library">React</dfn></td>
+              </tr>
+              <tr>
+                <td><dfn title="React framework">Next.js</dfn></td>
+              </tr>
+              <tr>
+                <td><dfn title="Programming language">Golang</dfn></td>
+              </tr>
+            </table>
+
+            <table border="1">
+              <caption>
+                DevOps Tools
+              </caption>
+              <colgroup>
+                <col span="1" />
+              </colgroup>
+              <tr>
+                <th>Category</th>
+              </tr>
+              <tr>
+                <td><dfn title="Containerization">Docker</dfn></td>
+              </tr>
+              <tr>
+                <td><dfn title="Orchestration">Kubernetes</dfn></td>
+              </tr>
+              <tr>
+                <td><dfn title="CI/CD">Jenkins</dfn></td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section id="current-tech">
+            <figure id="tech-figure">
+              <img
+                src="imgs/sdsc-small.jpg"
+                srcset="
+                  imgs/sdsc-small.jpg   400w,
+                  imgs/sdsc-medium.jpg  800w,
+                  imgs/sdsc-large.jpg  1200w
+                "
+                sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+                alt="San Diego Supercomputer Center group photo"
+                class="sdsc-image"
+              />
+              <figcaption>San Diego Supercomputer Center (SDSC)</figcaption>
+            </figure>
+            <p>
+              <kbd>H</kbd><kbd>e</kbd><kbd>l</kbd><kbd>l</kbd><kbd>o</kbd
+              ><kbd>!</kbd>
+            </p>
+        </section>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <p>Made with <strong>love</strong> by <em>Briana Fernandez</em>.</p>
+    </footer>
+  </body>
+</html>

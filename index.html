@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home Page</title>
+
+    <style>
+      footer {
+        border: 1px solid black;
+        border-color: black;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="site-navigation">
+      <h1>Briana Fernandez's Portfolio Website</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    <button id="toggle" style="display:none;">Switch to Dark</button>
+    <noscript>
+      <p>JavaScript is needed to use the toggle button.</p>
+    </noscript>
+    </header>
+
+    <main class="slide-in-left">
+      <p><code>Hello World!</code></p>
+      <hr />
+      <dl>
+        <dt>Software Developer</dt>
+        <dd>
+          Currently designing intuitive user interfaces
+          <abbr title="San Diego Supercomputer Center">SDSC.</abbr>
+        </dd>
+        <dt>UX Designer</dt>
+        <dd>Previously worked for the County of San Diego.</dd>
+      </dl>
+      <hr />
+    </main>
+
+    <hello-world></hello-world>
+
+    <script>
+      customElements.define(
+        "hello-world",
+        class extends HTMLElement {
+          constructor() {
+            super();
+            console.log("Hello World!");
+          }
+        }
+      );
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("toggle");
+      toggleBtn.style.display = "inline-block";
+      const body = document.body;
+      const current = localStorage.getItem("mode") || "light";
+      body.dataset.mode = current;
+      toggleBtn.textContent = `Switch to ${current === "dark" ? "Light" : "Dark"}`;
+  
+      toggleBtn.addEventListener("click", () => {
+       const updatedMode = body.dataset.mode === "light" ? "dark" : "light";
+        body.dataset.mode = updatedMode;
+        localStorage.setItem("mode", updatedMode);
+        toggleBtn.textContent = `Switch to ${updatedMode === "dark" ? "Light" : "Dark"}`;
+      });
+    });
+  </script>
+    <footer id="footer">
+      <p>Made with <strong>love</strong> by <em>Briana Fernandez</em>.</p>
+    </footer>
+  </body>
+</html>

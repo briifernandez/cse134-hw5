@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Resume Section</title>
+  </head>
+  <body>
+    <header id="site-navigation">
+      <h1>Resume Section</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </header>
+
+    <main id="resume-main">
+      <section id="resume-project">
+        <img
+          src="imgs/resume-small.png"
+          srcset="
+            imgs/resume-small.png  300w,
+            imgs/resume-medium.png 600w,
+            imgs/resume-large.png  900w
+          "
+          sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 900px"
+          alt="Briana Fernandez's Resume"
+          class="resume-image"
+        />
+        <details>
+          <summary>Project Details</summary>
+          <p>Project specifications available upon request.</p>
+        </details>
+      </section>
+      <aside id="resume-contact">
+        <h3>Contact Information</h3>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/kate-fernandez-ba958b227/">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="mailto:bfernandez@ucsd.edu">Email</a>
+          </li>
+        </ul>
+
+        <form action="https://httpbin.org/post" method="POST" id="contact-form>
+          <input type="hidden" name="possible_bot" value="true" />
+          <label for="name">Name<span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            maxlength="60"
+            pattern="[A-Za-z\s]+" 
+            required 
+            placeholder="Input your name"
+          />
+          <label for="email">Email<span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required 
+            placeholder="user@gmail.com"
+          />
+          <label for="comments">Comments</label>
+          <textarea
+            id="comments"
+            name="comments"
+            maxlength="250"
+            rows="6"
+            placeholder="Input your comments"
+          ></textarea>
+
+          <output id="error" role="alert"></output>
+          <output id="information"></output>
+
+          <button type="submit">Submit</button>
+        </form>   
+      </aside>
+    </main>
+
+    <footer id="footer">
+      <p>Made with <strong>love</strong> by <em>Briana Fernandez</em>.</p>
+    </footer>
+  </body>
+
+</html>
+
