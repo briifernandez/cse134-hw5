@@ -1,0 +1,22 @@
+[ 
+    {
+      "title": "San Diego Supercomputer Center",
+      "imageSrc": "imgs/sdsc-screen.png",
+      "imageAlt": "Image of San Diego Supercomputer work",
+      "description": "At the San Diego Supercomputer Center, I played a key role in modernizing research software applications by transitioning legacy AccessDB forms into a scalable web-based platform. I developed and optimized core application modules, including contact management, protocol tracking, and subject records, streamlining data workflows for researchers. Using React, TypeScript, Golang, and Tailwind CSS, I designed and implemented intuitive CRUD functionalities, improving usability and data accessibility.",
+      "link": "https://neurosciences.ucsd.edu/centers-programs/adrc/index.html"
+   }, {
+      "title": "County of San Diego",
+      "imageSrc": "imgs/county-screen.png",
+      "imageAlt": "Image of County of San Diego work",
+      "description": "At the County of San Diego, I led the design and development of the county’s film site landing page, enhancing accessibility and user experience for filmmakers and location managers. I created intuitive prototypes in Figma, conducted user interviews and usability tests to refine functionality, and translated the designs into a fully functional WordPress site. I presented the final design and key insights at the U.S. Chamber of Commerce Conference, highlighting its potential to drive revenue growth in the local film industry.",
+      "link": "https://www.sandiegocounty.gov/content/sdc/cao/edga/filming.html"
+    },
+    {
+      "title": "Innovating for National Security",
+      "imageSrc": "imgs/i4x-screen.png",
+      "imageAlt": "Image of Innovating for National Security work",
+      "description": "As part of Innovating for National Security, I collaborated with cross-functional teams to optimize vessel tracking operations for the U.S. Coast Guard within a 200-nautical-mile enforcement zone. Through comprehensive stakeholder interviews, I identified critical needs and pain points, refining project strategies to enhance operational efficiency. I developed Value Proposition Canvases (VPCs) and iteratively improved our Mission Model Canvas (MMC) to align with evolving insights.",
+      "link": "https://innovation.ucsd.edu/about-oic/programs/innovating-for-national-security.html"
+    }
+  ]
