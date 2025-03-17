@@ -338,7 +338,7 @@ experience-card {
   justify-content: flex-start;
   width: 500px;
   height: 900px;
-  border: 1px solid #ddd;
+  border: 1px groove #908484;
   border-radius: 10px;
   background-color: #f7ebd7;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -468,3 +468,38 @@ experience-card .card-footer a:active {
     height: 280px;
   }
 }
+
+#button-container {
+  margin-bottom: 1.5rem; 
+  display: flex;
+  justify-content: center; 
+  gap: 1rem; 
+}
+
+#load-local,
+#load-remote {
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #45d9cde1; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+}
+
+#load-local:hover,
+#load-remote:hover {
+  background-color: #326771; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#load-local:active,
+#load-remote:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
