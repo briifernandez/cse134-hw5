@@ -1,0 +1,1 @@
+This is my portfolio site which showcases the pages of about me, work, resume and experience. I refactored the HTML structure to improve semantic HTML and I updated the CSS to optimize layout and removed unnecessary properties to improve maintainability.
