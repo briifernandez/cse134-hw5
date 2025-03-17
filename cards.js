@@ -5,6 +5,7 @@ class Cards extends HTMLElement {
     }
     connectedCallback() {
 
+        const title = this.getAttribute('title') || 'Title';
         const imgSrc = this.getAttribute('img-src') || 'placeholder.jpg';
         const imgAlt = this.getAttribute('img-alt') || 'Experience Image'; 
         const description = this.getAttribute('description') || 'Experience description';
