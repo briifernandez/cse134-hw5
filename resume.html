@@ -1,155 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Resume Section</title>
-  </head>
-  <body>
-    <header id="site-navigation">
-      <h1>Resume Section</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="work.html">Work</a>
-        <a href="resume.html">Resume</a>
-        <a href="experience.html">Experience</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Section</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header id="site-navigation">
+    <h1>Resume</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="work.html">Work</a>
+      <a href="resume.html">Resume</a>
+      <a href="experience.html">Experience</a>
+    </nav>
+  </header>
 
-    <main id="resume-main">
-      <section id="resume-project">
+  <main>
+    <section class="resume-project">
+      <figure>
         <img
           src="imgs/resume-small.png"
           srcset="
-            imgs/resume-small.png  300w,
+            imgs/resume-small.png 300w,
             imgs/resume-medium.png 600w,
-            imgs/resume-large.png  900w
+            imgs/resume-large.png 900w
           "
           sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 900px"
-          alt="Briana Fernandez's Resume"
+          alt="Screenshot of Briana Fernandez's Resume"
           class="resume-image"
         />
-        <details>
-          <summary>Project Details</summary>
-          <p>Project specifications available upon request.</p>
-        </details>
-      </section>
-      <aside id="resume-contact">
-        <h3>Contact Information</h3>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/kate-fernandez-ba958b227/">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="mailto:bfernandez@ucsd.edu">Email</a>
-          </li>
-        </ul>
+      </figure>
+      <details>
+        <summary>Project Details</summary>
+        <p>Project specifications available upon request.</p>
+      </details>
+    </section>
 
-        <form action="https://httpbin.org/post" method="POST" id = "contact-form">
-          <input type="hidden" name="possible_bot" value="true" />
-          <label for="name">Name<span aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required 
-            placeholder="Input your name"
-          />
-          <label for="email">Email<span aria-hidden="true">*</span></label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required 
-            placeholder="user@gmail.com"
-          />
-          <label for="comments">Comments</label>
-          <textarea
-            id="comments"
-            name="comments"
-            rows="7"
-            placeholder="Input your comments"
-          ></textarea>
+    <aside class="contact-info">
+      <h2>Contact Information</h2>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/kate-fernandez-ba958b227/">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:bfernandez@ucsd.edu">Email</a>
+        </li>
+      </ul>
+    </aside>
+  </main>
 
-          <output id="error" role="alert"></output>
-          <output id="information"></output>
+  <footer>
+    <p>Made with <strong>love</strong> by <em>Briana Fernandez</em>.</p>
+  </footer>
 
-          <button type="submit">Submit</button>
-        </form>   
-      </aside>
-    </main>
-
-    <footer id="footer">
-      <p>Made with <strong>love</strong> by <em>Briana Fernandez</em>.</p>
-    </footer>
-  </body>
-
-
-  <script>
-    let form_errors = [];
-    const form = document.getElementById('contact-form');
-    const name = document.getElementById('name');
-    const emails = document.getElementById('emails');
-    const comments = document.getElementById('comments');
-    const outputError = document.getElementById('error');
-    const outputInformation= document.getElementById('information');
-
-    name.addEventListener('input', () => {
-    const oldValue = name.value;
-    name.value = oldValue.replace(/[^A-Za-z\s]/g, '');
-    if (name.value !== oldValue) {
-      handleError(name, 'You have typed an illegal character');
-    }
-  });
-    const maxAmount = 250;
-    comments.addEventListener('input', () => {
-    const chars = maxAmount - comments.value.length;
-    outputInformation.textContent = `There are ${chars} characters left.`;
-
-    outputInformation.style.color =
-    chars <= 0 ? 'red' :
-    chars <= 25 ? 'orange' :
-      'black';
-    if (chars < 0) {
-      comments.value = comments.value.slice(0, maxAmount);
-      handleError(comments, 'You have have reached the 250 character limit');
-    }
-  });
-
-    function handleError(element, message) {
-        form_errors.push({
-        field: element.id,
-        error: message,
-    });
-    outputError.textContent = message;
-    element.classList.add('error-message');
-
-    setTimeout(() => {
-        element.classList.remove('error-message');
-        outputError.textContent = '';
-    }, 2000);
-    }
-
-    form.addEventListener('submit', (event) => {
-        if (!form.checkValidity()) {
-         event.preventDefault();
-         errorOutput.textContent = 'There are currently errors in the form.';
-        return;
-    }
-    form.appendChild(Object.assign(document.createElement('input'), {
-        type: 'hidden',
-        name: 'form-errors',
-        value: JSON.stringify(form_errors)
-    }));
-    });
-  </script>
-
+</body>
 </html>

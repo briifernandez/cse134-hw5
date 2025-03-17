@@ -108,6 +108,13 @@ dl dd {
   margin-bottom: 1.5rem; 
 }
 
+.resume-image {
+  display: block;
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  margin: 0 auto;
+}
 
 #resume-main {
   display: flex;
