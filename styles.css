@@ -58,12 +58,6 @@ footer {
   background: linear-gradient(45deg, #5fade5 50%, #80d5af 50%);
 }
 
-#footer:hover {
-  transform: translateY(-8px) scale(1.03);
-  background-color: color-mix(in srgb,  #5fade5 50%, #80d5af 50%);
-}
-
-
 header {
   width: var(--full-width, 100dvw);
 }
@@ -175,12 +169,6 @@ footer {
 
 #hobbies-title {
   margin-bottom: 0.5rem;
-}
-
-#about-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 #about-list {

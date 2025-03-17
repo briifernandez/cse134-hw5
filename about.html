@@ -8,12 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>About Me</title>
   </head>
   <body>
-    <template id="hidden">
-      <h1>Hidden header</h1>
-    </template>
+
     <header id="site-navigation">
       <h1>About Me</h1>
       <nav>
@@ -28,26 +26,27 @@
     <main>
       <div id="about-container">
         <div id="hobbies-container">
-          <hgroup id="hobbies-title">
+          <div id="hobbies-title">
             <h2>Favorite Hobbies</h2>
-            <address>
-              <h3>Based in San Diego, CA</h3>
-            </address>
-          </hgroup>
+            <h3>Based in San Diego, CA</h3>
+          </div>
+
           <ul id="about-list">
             <li>Hiking</li>
             <li>Rock Climbing</li>
             <li>Swimming</li>
           </ul>
         </div>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fill="currentColor"
           class="size-4"
+          aria-hidden="true"
         >
           <path
-            d="M8 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 1ZM10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM12.95 4.11a.75.75 0 1 0-1.06-1.06l-1.062 1.06a.75.75 0 0 0 1.061 1.062l1.06-1.061ZM15 8a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 15 8ZM11.89 12.95a.75.75 0 0 0 1.06-1.06l-1.06-1.062a.75.75 0 0 0-1.062 1.061l1.061 1.06ZM8 12a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 12ZM5.172 11.89a.75.75 0 0 0-1.061-1.062L3.05 11.89a.75.75 0 1 0 1.06 1.06l1.06-1.06ZM4 8a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 4 8ZM4.11 5.172A.75.75 0 0 0 5.173 4.11L4.11 3.05a.75.75 0 1 0-1.06 1.06l1.06 1.06Z"
+            d="M8 1a.75.75 0 0 1..."
           />
         </svg>
 
@@ -55,20 +54,22 @@
           <h3>About Me</h3>
           <div id="bio">
             <p>
-              I’m a passionate software developer and UX designer from San Diego, CA.
-              Currently, I am a senior at University of California, San Diego studying Cognitive Science with a specialization in Design and Interaction with a minor in Computer Science.
+              I’m a passionate software developer and UX designer from San Diego, CA. Currently, I am a senior at University of California, San Diego studying Cognitive Science with a specialization in Design and Interaction, and minoring in Computer Science.
             </p>
             <p>
-              Outside of coding, you'll find me hiking, rock climbing, or
-              exploring the outdoors. 
+              Outside of coding, you'll find me hiking, rock climbing, or exploring the outdoors.
+            </p>
             <p>
-                Feel free to get in touch on LinkedIn or by email—I’d enjoy a coffee chat to connect.
+              Feel free to get in touch on LinkedIn or by email—I’d enjoy
+              a coffee chat to connect.
             </p>
           </div>
         </aside>
       </div>
+
       <img
         src="imgs/ocean-small.jpg"
+        loading="lazy"
         srcset="
           imgs/ocean-small.jpg   400w,
           imgs/ocean-medium.jpg  800w,
@@ -81,7 +82,9 @@
     </main>
 
     <footer id="footer">
-      <p>Made with <strong>love</strong> by <em>Briana Fernandez</em>.</p>
+      <p>
+        Made with <strong>love</strong> by <em>Briana Fernandez</em>.
+      </p>
     </footer>
   </body>
 </html>
